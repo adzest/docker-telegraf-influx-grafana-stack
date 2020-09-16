@@ -3,13 +3,13 @@ services:
   telegraf:
     image: library/telegraf:1.14-alpine
     volumes:
-    - ./telegraf/etc/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ./telegraf/etc/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     depends_on:
       - influxdb
     links:
       - influxdb
     ports:
-    - '127.0.0.1:8125:8125/udp'
+      - '127.0.0.1:8125:8125/udp'
 
   influxdb:
     image: influxdb:1.8-alpine
@@ -21,7 +21,11 @@ services:
       - influxdb_data:/var/lib/influxdb
 
   grafana:
-    image: grafana/grafana:6.7.0
+    image: grafana/grafana:7.0.0-beta1
+    environment:
+      GF_RENDERING_SERVER_URL: http://renderer:8081/render
+      GF_RENDERING_CALLBACK_URL: http://grafana:3000/
+      GF_LOG_FILTERS: rendering:debug
     depends_on:
       - influxdb
     env_file: configuration.env
@@ -33,6 +37,13 @@ services:
       - grafana_data:/var/lib/grafana
       - ./grafana/provisioning/:/etc/grafana/provisioning/
       - ./grafana/dashboards/:/var/lib/grafana/dashboards/
+
+  renderer:
+    image: grafana/grafana-image-renderer:2.0.0-beta1
+    ports:
+      - 8081
+    environment:
+      ENABLE_METRICS: 'true'
 
 volumes:
   grafana_data: {}
