@@ -1,15 +1,15 @@
 version: '3.6'
 services:
-  telegraf:
-    image: library/telegraf:1.14-alpine
-    volumes:
-      - ./telegraf/etc/telegraf.conf:/etc/telegraf/telegraf.conf:ro
-    depends_on:
-      - influxdb
-    links:
-      - influxdb
-    ports:
-      - '127.0.0.1:8125:8125/udp'
+#  telegraf:
+#    image: library/telegraf:1.14-alpine
+#    volumes:
+#      - ./telegraf/etc/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+#    depends_on:
+#      - influxdb
+#    links:
+#      - influxdb
+#    ports:
+#      - '127.0.0.1:8125:8125/udp'
 
   influxdb:
     image: influxdb:1.8-alpine
