@@ -1,60 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "JMETER_DASHBOARD",
-      "label": "DB name",
-      "description": "Create a Datasource in Grafana that points to jmeter database",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    },
-    {
-      "name": "VAR_MEASUREMENT_NAME",
-      "type": "constant",
-      "label": "Measurement name",
-      "value": "jmeter",
-      "description": "InfluxDB measurement name"
-    },
-    {
-      "name": "VAR_SEND_INTERVAL",
-      "type": "constant",
-      "label": "Backend send interval",
-      "value": "5",
-      "description": "in second, should match JMeter property \"backend_influxdb.send_interval\""
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "4.6.2"
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "1.4.0"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -76,8 +20,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 11,
-  "iteration": 1596479560733,
+  "id": 3,
+  "iteration": 1601560954403,
   "links": [],
   "panels": [
     {
@@ -100,7 +44,7 @@
       "pageSize": 150,
       "showHeader": true,
       "sort": {
-        "col": 6,
+        "col": 13,
         "desc": true
       },
       "styles": [
@@ -965,7 +909,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -998,9 +943,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -1112,7 +1058,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -1143,9 +1090,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -1265,7 +1213,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -1298,9 +1247,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -1462,7 +1412,8 @@
       "decimals": 0,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -1492,9 +1443,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1598,7 +1550,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -1632,9 +1585,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -1862,7 +1816,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -1896,9 +1851,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -2126,7 +2082,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -2160,9 +2117,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -2391,7 +2349,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -2425,9 +2384,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -2655,7 +2615,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -2689,9 +2650,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -3525,7 +3487,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -3557,9 +3520,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -3680,7 +3644,8 @@
       "decimals": 0,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -3711,9 +3676,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": true,
       "renderer": "flot",
@@ -3823,7 +3789,8 @@
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -3857,9 +3824,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.2.0",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -4246,7 +4214,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 25,
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [
     "render_only"
@@ -4256,9 +4224,9 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "B2B_Load",
-          "value": "B2B_Load"
+          "selected": false,
+          "text": "all",
+          "value": "all"
         },
         "datasource": "$data_source",
         "definition": "SELECT DISTINCT(\"application\") FROM (SELECT \"text\", \"application\" FROM events)  ",
@@ -4281,7 +4249,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "10",
           "value": "10"
         },
@@ -4290,7 +4258,7 @@
         "name": "limit",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "10",
             "value": "10"
           }
@@ -4304,8 +4272,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "15-07-20_17:36 10",
-          "value": "15-07-20_17:36 10"
+          "text": "30-09-20_23:29 10",
+          "value": "30-09-20_23:29 10"
         },
         "datasource": "$data_source",
         "definition": "SELECT DISTINCT(\"testRun\") from (select \"text\", \"testRun\" from events where \"application\"=~/^$project$/) ORDER BY DESC LIMIT $limit",
@@ -4330,8 +4298,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "B2G",
-          "value": "B2G"
+          "text": "get_status/data",
+          "value": "get_status/data"
         },
         "datasource": "$data_source",
         "definition": "SELECT distinct(\"transaction\") from (select \"min\", \"transaction\" from jmeter where \"application\"=~/^$project$/ and \"testRun\"=~/^$run$/)",
@@ -4413,8 +4381,10 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "All",
+          "selected": false,
+          "text": [
+            "All"
+          ],
           "value": [
             "$__all"
           ]
@@ -4441,8 +4411,10 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "All",
+          "selected": false,
+          "text": [
+            "All"
+          ],
           "value": [
             "$__all"
           ]
@@ -4469,8 +4441,10 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "All",
+          "selected": false,
+          "text": [
+            "All"
+          ],
           "value": [
             "$__all"
           ]
@@ -4497,8 +4471,10 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "All",
+          "selected": false,
+          "text": [
+            "All"
+          ],
           "value": [
             "$__all"
           ]
@@ -4525,8 +4501,10 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "All",
+          "selected": false,
+          "text": [
+            "All"
+          ],
           "value": [
             "$__all"
           ]
@@ -4553,8 +4531,8 @@
     ]
   },
   "time": {
-    "from": "now-6h",
-    "to": "now"
+    "from": "2020-10-01T11:36:33.000Z",
+    "to": "2020-10-01T13:43:48.000Z"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -4583,5 +4561,5 @@
   "timezone": "",
   "title": "Render Dash",
   "uid": "renderdash",
-  "version": 2
+  "version": 5
 }

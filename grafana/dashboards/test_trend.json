@@ -1,60 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "JMETER_DASHBOARD",
-      "label": "DB name",
-      "description": "Create a Datasource in Grafana that points to jmeter database",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    },
-    {
-      "name": "VAR_MEASUREMENT_NAME",
-      "type": "constant",
-      "label": "Measurement name",
-      "value": "jmeter",
-      "description": "InfluxDB measurement name"
-    },
-    {
-      "name": "VAR_SEND_INTERVAL",
-      "type": "constant",
-      "label": "Backend send interval",
-      "value": "5",
-      "description": "in second, should match JMeter property \"backend_influxdb.send_interval\""
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "4.6.2"
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "1.4.0"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -72,8 +16,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 10,
-  "iteration": 1594738674880,
+  "id": 5,
+  "iteration": 1601561226758,
   "links": [],
   "panels": [
     {
@@ -81,7 +25,8 @@
       "fieldConfig": {
         "defaults": {
           "custom": {
-            "align": null
+            "align": null,
+            "filterable": false
           },
           "mappings": [],
           "thresholds": {
@@ -276,7 +221,7 @@
         "frameIndex": 1,
         "showHeader": true
       },
-      "pluginVersion": "7.0.6",
+      "pluginVersion": "7.2.0",
       "targets": [
         {
           "alias": "",
@@ -579,7 +524,8 @@
       "fieldConfig": {
         "defaults": {
           "custom": {
-            "align": null
+            "align": null,
+            "filterable": false
           },
           "mappings": [],
           "thresholds": {
@@ -774,7 +720,7 @@
         "frameIndex": 1,
         "showHeader": true
       },
-      "pluginVersion": "7.0.6",
+      "pluginVersion": "7.2.0",
       "targets": [
         {
           "alias": "",
@@ -1648,7 +1594,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 25,
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [
     "trends",
@@ -1679,9 +1625,9 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "IMtestNEW",
-          "value": "IMtestNEW"
+          "selected": false,
+          "text": "all",
+          "value": "all"
         },
         "datasource": "$data_source",
         "definition": "SELECT DISTINCT(\"application\") FROM (SELECT \"text\", \"application\" FROM events)  ",
@@ -1911,5 +1857,5 @@
   "timezone": "",
   "title": "Tests Trends",
   "uid": "ubn_P4WMk",
-  "version": 3
+  "version": 1
 }
