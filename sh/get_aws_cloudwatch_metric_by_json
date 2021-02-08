@@ -1,0 +1,3 @@
+SET METRIC_NAME = ${$1:-SERVICE_CPU}
+
+aws cloudwatch get-metric-widget-image --metric-widget file:../../$METRIC_NAME.json --output-format png | jq -r '.MetricWidgetImage' | base64 --decode >| $METRIC_NAME.png
